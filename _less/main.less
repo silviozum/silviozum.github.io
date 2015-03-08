@@ -15,7 +15,7 @@
 /* RESET */
 li{list-style: none;}
 a{text-decoration: none;}
-p, body, figure{
+p, body, figure,ul{
 	margin:0;
 	padding: 0;
 }
@@ -28,6 +28,7 @@ section{
 body{
 	font-family: @text;
 	color: @dark_grey;
+	font-size: 18px;
 }
 /*END_RESET*/
 
@@ -43,7 +44,7 @@ header{
 	
 		a{
 			font-family: @roboto;
-			font-size: 2em;
+			font-size: 1em;
 			color: @dark_grey;
 			opacity: 0.5;
 		}
@@ -82,5 +83,35 @@ footer{
 		float: right;
 		text-indent: -9999em;
 	}
+}
+
+aside.info{
+	float: left;
+	width: 20%;
+	border-right: 2px solid black;
+	text-align: center;
+	padding-right: @gutter;
+	figure{
+		border-radius: 100px;
+		width: 100px;
+		height: 100px;
+		background: url(../img/ieu.jpg);
+		text-indent: -9999em;
+		border: 2px solid black;
+		margin-left: @gutter*2;
+	}
+	p{
+		margin-top: @gutter;
+		font-style: italic;
+		color: grey;
+		font-weight: lighter;
+		font-family: @roboto;
+		font-size: 0.9em;
+		text-align: center;
+		margin-bottom: @gutter;
+	}
+	li{
+		display: inline-block;
+	}		
 }
 	
