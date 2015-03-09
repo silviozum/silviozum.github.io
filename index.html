@@ -1,29 +1,37 @@
 ---
 layout: default
 ---
+  <div class="banner"></div>
   <section>
     <aside class="info">
       <figure>Silvio Carlos</figure>
       <p>Especialista em desvio mental, pixels e distúrbio crônico, fissurado em tecnolocia, art e video games. Busando ser alguém mas sem da poltrona porque não curto andar.</p>
       <ul>
-        <li><a href=""><img src="img/facebook.png"></a></li>
-        <li><a href=""><img src="img/twitter.png"></a></li>
-        <li><a href=""><img src="img/tumblr.png"></a></li>
-      </ul>  
+        <li><a href="https://facebook.com.br/silvio.freitas.35"><img src="img/facebook.png"></a></li>
+        <li><a href="https://twitter.com/{{ site.twitter_username }}"><img src="img/twitter.png"></a></li>
+        <li><a href="https://www.zombiemod.tumblr.com/"><img src="img/tumblr.png"></a></li>
+      </ul> 
+
     </aside>  
 
-    <h1>Posts</h1>
+    <div class="content">
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <span>
+              <p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+            </span>  
 
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2>
+              {{ post.title }}
+            </h2>
 
-          <h2>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-        </li>
-      {% endfor %}
-    </ul>
+            <p class="description">{{ post.content | strip_html | truncatewords:80 }}</p>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="link">Leia mais sobre...</a>
+
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
 
   </section>

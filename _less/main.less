@@ -14,13 +14,17 @@
 
 /* RESET */
 li{list-style: none;}
-a{text-decoration: none;}
+a{
+	text-decoration: none;
+	color:@dark_grey;
+	&:hover{color:@light_grey;}
+}
 p, body, figure,ul{
 	margin:0;
 	padding: 0;
 }
 section{
-	width: 960px;
+	width: 1000px;
 	display: block;
 	margin: 0 auto;
 	padding-top: 20px;
@@ -35,8 +39,9 @@ body{
 /*BODY*/
 
 header{
-	display: flex;
+	display: block;
 	text-align: right;
+	padding: @gutter @gutter*4;
 	li{
 		display: inline-block;
 		margin-left: @gutter;
@@ -64,10 +69,9 @@ header{
 footer{
 	background: @dark_grey;
 	text-align: center;
-	position: absolute;
-	left: 0;
-	bottom:0;
 	width: 100%;
+	display: block;
+	clear: both;
 	p{
 		font-family: @roboto;
 		font-size: 1em;
@@ -87,18 +91,17 @@ footer{
 
 aside.info{
 	float: left;
-	width: 20%;
-	border-right: 2px solid black;
+	width: 21%;
 	text-align: center;
-	padding-right: @gutter;
+	margin-top: -70px;
 	figure{
 		border-radius: 100px;
 		width: 100px;
 		height: 100px;
 		background: url(../img/ieu.jpg);
 		text-indent: -9999em;
-		border: 2px solid black;
-		margin-left: @gutter*2;
+		border: 4px solid white;
+		margin:0 auto;
 	}
 	p{
 		margin-top: @gutter;
@@ -106,7 +109,7 @@ aside.info{
 		color: grey;
 		font-weight: lighter;
 		font-family: @roboto;
-		font-size: 0.9em;
+		font-size: 1em;
 		text-align: center;
 		margin-bottom: @gutter;
 	}
@@ -114,4 +117,57 @@ aside.info{
 		display: inline-block;
 	}		
 }
-	
+.banner{
+	background: url(../img/banner01.jpg)center center;
+	width: 100%;
+	height: 385px;
+}
+.content{
+		float: left;
+		margin-left: @gutter*4;
+		padding-top: @gutter;
+		margin-bottom: 500px;
+		width: 70%;
+	span{
+	    background: none repeat scroll 0 0 #1c1c1c;
+	    border-radius: 100%;
+	    font-size: 1em;
+	    color: #acacac;
+	    display: inline-block;
+	    height: 80px;
+	    width: 80px;
+	    float: left;
+	    margin-right: @gutter;
+	    margin-bottom: @gutter;
+	   	p{
+	   		text-align: center;
+	   		display: inline-block;
+	   		margin-top: @gutter;
+	    	font-family: @roboto;
+	   		font-weight: bold;
+	   	} 
+	}
+
+	a.link{
+		font-weight: bold;
+		margin-bottom: @gutter*2;
+		display: inline-block;
+		font-size: 1.5em;
+	}
+}
+.description{
+	display: inline-block;
+	font-weight: lighter;
+	font-size: 1.5em;
+	margin-bottom: @gutter/2;
+}
+h2{
+	padding-top: @gutter;
+	font-size: 2em;
+	color:@dark_red;
+}
+.page_post{
+	img{
+		margin: @gutter 0;
+	}
+}	

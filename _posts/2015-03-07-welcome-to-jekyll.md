@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Sushi, LSD e um Projeto sem nome!"
 date:   2015-03-07 23:31:47
 categories: jekyll update
 ---
