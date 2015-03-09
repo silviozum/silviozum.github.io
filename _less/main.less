@@ -41,11 +41,11 @@ body{
 header{
 	display: block;
 	text-align: right;
-	padding: @gutter @gutter*4;
+	padding: @gutter/2 @gutter*4;
 	li{
 		display: inline-block;
 		margin-left: @gutter;
-		line-height: 150px;
+		line-height: 90px;
 	
 		a{
 			font-family: @roboto;
@@ -59,8 +59,8 @@ header{
 	}		
 	.logo{
 		background: url(../img/logo.png);
-		width: 108px;
-		height: 150px;
+		width: 65px;
+		height: 90px;
 		display: inline-block;
 		text-indent: -9999em;
 		float: left;
@@ -96,8 +96,8 @@ aside.info{
 	margin-top: -70px;
 	figure{
 		border-radius: 100px;
-		width: 100px;
-		height: 100px;
+		width: 200px;
+		height: 200px;
 		background: url(../img/ieu.jpg);
 		text-indent: -9999em;
 		border: 4px solid white;
@@ -167,6 +167,7 @@ h2{
 	color:@dark_red;
 }
 .page_post{
+	margin-bottom: @gutter*4;
 	img{
 		margin: @gutter 0;
 	}
