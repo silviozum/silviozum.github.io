@@ -34,6 +34,12 @@ body{
 	color: @dark_grey;
 	font-size: 18px;
 }
+h2{
+	padding-top: @gutter;
+	font-size: 2em;
+	color:@dark_red;
+	font-family: @roboto;
+}
 /*END_RESET*/
 
 /*BODY*/
@@ -93,7 +99,7 @@ aside.info{
 	float: left;
 	width: 21%;
 	text-align: center;
-	margin-top: -70px;
+	margin-top: -80px;
 	figure{
 		border-radius: 100px;
 		width: 200px;
@@ -161,14 +167,35 @@ aside.info{
 	font-size: 1.5em;
 	margin-bottom: @gutter/2;
 }
-h2{
-	padding-top: @gutter;
-	font-size: 2em;
-	color:@dark_red;
-}
+
 .page_post{
 	margin-bottom: @gutter*4;
 	img{
 		margin: @gutter 0;
 	}
-}	
+	header{
+		padding: 0;
+		h2.post-title{
+			text-align: left;
+			font-size: 3em;
+		}
+	}		
+	.post-meta{
+		margin-top: @gutter*2;
+		display: inline-block;
+		h3{
+		font-size: 1.75em;
+		color: @dark_grey;
+		font-family: @text;
+		}
+	}	
+}
+.highlight{
+	background: @dark_grey;
+	padding:10px ;
+	width: 100%;
+	color: grey;
+	margin-top: @gutter;
+	margin-bottom: @gutter;
+
+}
