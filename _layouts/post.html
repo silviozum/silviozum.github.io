@@ -12,4 +12,6 @@ layout: default
   </article>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 
+    {% include comments.html %}
+
 </section>
