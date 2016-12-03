@@ -1,12 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Source+Sans+Pro:400,300,900,700italic,700,600italic,600,400italic,300italic,200italic,200);
-
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Abel');
 /* FontS */
-@text: 'Source Sans Pro', sans-serif;
-@roboto:'Roboto Slab', serif;
+@text: 'Abel', sans-serif;
+@text_title:'Bungee', cursive;
 
 /*Color*/
 @dark_grey:#1c1c1c;
-@dark_red:#831a1a;
+@dark_red:#831A57;
 @light_grey:#acacac;
  
  /* margin */
@@ -20,67 +20,83 @@ a{
 	color:@dark_grey;
 	&:hover{color:@light_grey;}
 }
-p, body, figure,ul{
+p, body, figure, ul, menu, blockquote{
 	margin:0;
 	padding: 0;
 }
 section{
-	width: 1000px;
 	display: block;
-	margin: 0 auto;
-	padding-top: 20px;
 }
 body{
 	font-family: @text;
-	color: @dark_grey;
 	font-size: 18px;
 }
-h2{
-	padding-top: @gutter;
-	font-size: 2em;
-	color:@dark_red;
-	font-family: @roboto;
-}
+
 /*END_RESET*/
 
 /*BODY*/
 
 header{
 	display: block;
-	text-align: right;
-	padding: @gutter/2 @gutter*4;
-	li{
-		display: inline-block;
-		margin-left: @gutter;
-		line-height: 90px;
-	
-		a{
-			font-family: @roboto;
-			font-size: 1em;
-			color: @dark_grey;
-			opacity: 0.5;
+	text-align: center;
+	.header-image{
+		width: 100%;
+		height: calc(100vh);
+		background-size: cover;
+		background-attachment: fixed;
+		background-image: url(../img/header-image.jpg);
+		li{
+			display: inline-block;
+			margin-left: @gutter;
+			line-height: 90px;
+		
+			a{
+				font-size: 1em;
+				color: @dark_grey;
+				opacity: 0.5;
+			}
+			a:hover{
+				opacity: 1;
+			}
+		}		
+		.logo{
+			background: url(../img/logo.png);
+			width: 65px;
+			height: 90px;
+			display: inline-block;
+			text-indent: -9999em;
+			float: left;
 		}
-		a:hover{
-			opacity: 1;
+		h1{
+			font-family: @text_title;
+			    color: #f4f4f4;
+			    letter-spacing: 3px;
+			    font-size: 56px;
+			    margin-top: 15%;
+			    span{
+			    	color: @dark_red;
+			    }
 		}
-	}		
-	.logo{
-		background: url(../img/logo.png);
-		width: 65px;
-		height: 90px;
-		display: inline-block;
-		text-indent: -9999em;
-		float: left;
+		&:after{
+			content: '';
+		    background-image: linear-gradient(180deg,rgba(0,0,0,.8) 0,transparent 50%,transparent 90%,rgba(0,0,0,.8));
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		    z-index: 2;
+		    will-change: transform;
+		}
 	}	
 }
 footer{
-	background: @dark_grey;
 	text-align: center;
 	width: 100%;
 	display: block;
 	clear: both;
 	p{
-		font-family: @roboto;
+
 		font-size: 1em;
 		color:@light_grey;
 		font-weight: lighter;
@@ -95,40 +111,79 @@ footer{
 		text-indent: -9999em;
 	}
 }
-
-aside.info{
-	float: left;
-	width: 21%;
+.my-info{
+	background-color: #f1f1f1;
+	padding: 80px 0;
 	text-align: center;
-	margin-top: -80px;
-	figure{
-		border-radius: 100px;
-		width: 200px;
-		height: 200px;
-		background: url(../img/ieu.jpg);
-		text-indent: -9999em;
-		border: 4px solid white;
-		margin:0 auto;
-	}
 	p{
-		margin-top: @gutter;
-		font-style: italic;
-		color: grey;
-		font-weight: lighter;
-		font-family: @roboto;
-		font-size: 1em;
-		text-align: center;
-		margin-bottom: @gutter;
+	    width: 70%;
+	    margin: 0 auto;
+	    font-size: 28px;
+	    font-weight: bold;
+	    letter-spacing: 0.1em;
+	    color:@light_grey	;
+	    font-family: @text;
 	}
-	li{
-		display: inline-block;
-	}		
 }
-.banner{
-	background: url(../img/banner01.jpg)center center;
-	width: 100%;
-	height: 385px;
-	background-size: cover;
+.second_paragraph{
+	background-color: @dark_red;
+	padding: 80px 0;
+	p{
+		width: 70%;
+	    margin: 0 auto;
+	    font-size: 28px;
+	    font-weight: bold;
+	    letter-spacing: 0.1em;
+	    color:#fff;
+	    font-family: @text;
+	}
+}
+.section-skills{
+	padding: 80px 5px;
+	background-color: #fff;
+	text-align: center;
+	section{
+		max-width: 1280px;
+		margin: 0 auto;
+		figure{
+			width:318px;
+			height: 318px;
+			background-size: cover;
+			border-radius: 50%;
+			background-image: url(../img/me.jpg);
+			text-align: center;
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+					
+		}
+		.content_skills{
+			display: inline-block;
+			margin-left: 5%;
+			text-align: left;
+			h2{
+				color: @dark_red;
+				font-size: 2em;
+			}	
+			ul{
+			-webkit-column-count: 2;
+		       -moz-column-count: 2;
+		            column-count: 2;
+
+				li{
+					font-size: 1.2em;
+					margin: 10px;
+					color: @light_grey;
+					font-weight: bold;
+					span{
+						font-size: 1em;
+						display: block;
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
 }
 .content{
 		float: left;
@@ -149,7 +204,6 @@ aside.info{
 	    margin-bottom: @gutter;
 	   	p{
 		    display: inline-block;
-		    font-family: @roboto;
 		    font-weight: bold;
 		    margin-left: 2px;
 		    margin-top: 18px;

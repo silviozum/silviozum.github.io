@@ -28,17 +28,7 @@ module.exports = function(grunt) {
         dest: 'css/main.min.css'
       }
     },
-    jekyll: {
-      options: {                          
-        src: '.'
-      },
-      dist: {
-        options: {
-          dest: './_site',
-          config: '_config-dev.yml'
-        }
-      }
-    },
+
     watch: {
       options: {
         livereload: true,
@@ -66,7 +56,7 @@ module.exports = function(grunt) {
 
   });
 require('load-grunt-tasks')(grunt);
-grunt.registerTask('default', ['less', 'concat:css', 'cssmin:css', 'jekyll']);
+grunt.registerTask('default', ['less', 'concat:css', 'cssmin:css']);
 grunt.registerTask('css', ['less', 'concat:css', 'cssmin:css']);
 grunt.registerTask('server', ['connect', 'watch']);
 };
