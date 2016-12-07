@@ -1,9 +1,9 @@
 {
-  "name": "SushiProject",
+  "name": "Silvio Freitas",
   "version": "0.0.1",
   "description": "The shit of sushi project",
   "author": "silviozum",
-  "homepage": "http://sushiproject.github.io/",
+  "homepage": "http://silviozum.github.io/",
   "license": "",
   "devDependencies": {
     "grunt": "~0.4.5",
